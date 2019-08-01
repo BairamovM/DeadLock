@@ -1,0 +1,5 @@
+2019-07-09 06:58:45 INFO  FirstThread:21 - Start FirstThread
+2019-07-09 06:58:46 INFO  FirstThread:33 - Finish FirstThread
+2019-07-09 06:58:46 INFO  FirstThread:20 - Start SecondThread
+2019-07-09 06:58:47 INFO  FirstThread:30 - Finish SecondThread
+2019-07-09 06:58:47 INFO  FirstThread:38 - Main thread finished
