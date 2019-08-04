@@ -1,5 +1,8 @@
-2019-07-09 06:58:45 INFO  FirstThread:21 - Start FirstThread
-2019-07-09 06:58:46 INFO  FirstThread:33 - Finish FirstThread
-2019-07-09 06:58:46 INFO  FirstThread:20 - Start SecondThread
-2019-07-09 06:58:47 INFO  FirstThread:30 - Finish SecondThread
-2019-07-09 06:58:47 INFO  FirstThread:38 - Main thread finished
+2019-08-04 14:56:16 INFO  Resource:10 - test1-begin
+2019-08-04 14:56:16 INFO  Resource:20 - test2-begin
+2019-08-04 14:57:05 INFO  Resource:10 - test1-begin
+2019-08-04 14:57:05 INFO  Resource:20 - test2-begin
+2019-08-04 14:57:35 INFO  Resource:10 - test1-begin
+2019-08-04 14:57:35 INFO  Resource:20 - test2-begin
+2019-08-04 14:59:16 INFO  Resource:20 - test2-begin
+2019-08-04 14:59:16 INFO  Resource:10 - test1-begin

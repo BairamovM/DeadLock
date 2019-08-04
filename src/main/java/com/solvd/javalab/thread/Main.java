@@ -8,30 +8,15 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // creating one object
+        // creating one and second object
         Resource s1 = new Resource();
-
-        // creating second object
         Resource s2 = new Resource();
 
-        // creating first thread and starting it
+        // creating first and second threads and starting
         FirstThread t1 = new FirstThread(s1, s2);
-        t1.start();
-
-        // creating second thread and starting it
         SecondThread t2 = new SecondThread(s1, s2);
+        t1.start();
         t2.start();
-
-        // sleeping main thread
-        Thread.sleep(2000);
-
-
-
-
-
-
-
-
 
     }
 
