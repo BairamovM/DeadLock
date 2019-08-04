@@ -6,7 +6,7 @@ public class Main {
 
     private static final Logger log = Logger.getLogger(Main.class);
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         // creating one and second object
         Resource s1 = new Resource();
