@@ -6,43 +6,32 @@ public class Main {
 
     private static final Logger log = Logger.getLogger(Main.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        // creating one object
+        Resource s1 = new Resource();
+
+        // creating second object
+        Resource s2 = new Resource();
+
+        // creating first thread and starting it
+        FirstThread t1 = new FirstThread(s1, s2);
+        t1.start();
+
+        // creating second thread and starting it
+        SecondThread t2 = new SecondThread(s1, s2);
+        t2.start();
+
+        // sleeping main thread
+        Thread.sleep(2000);
 
 
 
 
-        FirstResource firstResource = new FirstResource();
-        SecondResource secondResource = new SecondResource();
-        firstResource.secondResource = secondResource;
-        secondResource.firstResource = firstResource;
-
-        FirstThread firstThread = new FirstThread("FirstThread");
-        firstThread.firstResource = firstResource;
-       //firstThread.setPriority(1);
-
-        SecondThread secondThread = new SecondThread ("SecondThread");
-        secondThread.secondResource = secondResource;
-        //secondThread.setPriority(10);
 
 
 
 
-
-        firstThread.start();
-        try {
-            firstThread.join();
-        } catch (InterruptedException e) {
-            System.out.println(firstThread.getName());
-        }
-
-       secondThread.start();
-//        try {
-//            secondThread.join();
-//        } catch (InterruptedException e) {
-//            System.out.println(secondThread.getName());
-//        }
-
-        log.info("Main thread finished");
 
     }
 

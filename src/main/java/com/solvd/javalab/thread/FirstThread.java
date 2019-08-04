@@ -1,39 +1,30 @@
 package com.solvd.javalab.thread;
 
 import org.apache.log4j.Logger;
-import com.solvd.javalab.thread.SecondResource;
 
 public class FirstThread extends Thread {
 
+    private Resource s1;
+    private Resource s2;
+
     private static final Logger log = Logger.getLogger(FirstThread.class);
 
-    FirstThread (String name) {
-
-        super(name);
-
+    // constructor to initialize fields
+    public FirstThread(Resource s1, Resource s2)
+    {
+        this.s1 = s1;
+        this.s2 = s2;
     }
 
-    SecondResource secondResource;
-    FirstResource firstResource;
-
+    // run method to start a thread
     @Override
     public void run () {
 
-        System.out.println( "Start " + Thread.currentThread().getName());
-        log.info("Start " + Thread.currentThread().getName());
-
+        // taking object lock of s1 enters
+        // into test1 method
         try {
-            Thread.sleep(1000);
-
-        } catch (InterruptedException e) {
-
-            System.out.println("Thread has been interrupted");
-            log.info("Thread has been interrupted");
-
-        }
-        System.out.println( "Finish " + Thread.currentThread().getName());
-        log.info("Finish " + Thread.currentThread().getName());
-        System.out.println(firstResource.getVal());
+            s1.test1(s2);
+        } catch (InterruptedException e) { }
 
     }
 
